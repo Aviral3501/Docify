@@ -1,4 +1,4 @@
-const mongoose =require("mongoose");
+const mongoose = require("mongoose");
 const Document = require("./Document");
 
  mongoose.connect("mongodb+srv://Demo01:Xjtm4Ef6VQ0bacZV@cluster0.9bqikjb.mongodb.net/docify");
@@ -7,7 +7,7 @@ const Document = require("./Document");
 
 const io = require('socket.io')(3001 , {
     cors:{
-        origin:"http://localhost:3000",
+        origin:"https://docify-q26v.vercel.app/",
         methods:["GET","POST"],
     }
 });

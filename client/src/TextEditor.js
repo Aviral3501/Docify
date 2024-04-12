@@ -28,7 +28,7 @@ export default function TextEditor() {
   //only render the instance of quill once when the compoents mounts
 useEffect(()=>{
   //connecting with socket
-const s =io("http://localhost:3001");
+const s =io("https://docify-l6u4.vercel.app/");
 setSocket(s);
 
   //disconnecting with socket
