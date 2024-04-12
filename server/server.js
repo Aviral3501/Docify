@@ -1,5 +1,13 @@
 const mongoose = require("mongoose");
 const Document = require("./Document");
+const express = require("express");
+const app = express();
+
+app.get("/",(req,res)=>{
+    return res.json({
+        "message":"Hello , Welcome to docify"
+    });
+})
 
  mongoose.connect("mongodb+srv://Demo01:Xjtm4Ef6VQ0bacZV@cluster0.9bqikjb.mongodb.net/docify");
 
