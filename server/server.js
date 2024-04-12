@@ -1,13 +1,5 @@
-const mongoose = require("mongoose");
+const mongoose =require("mongoose");
 const Document = require("./Document");
-const express = require("express");
-const app = express();
-
-app.get("/",(req,res)=>{
-    return res.json({
-        "message":"Hello , Welcome to docify"
-    });
-})
 
  mongoose.connect("mongodb+srv://Demo01:Xjtm4Ef6VQ0bacZV@cluster0.9bqikjb.mongodb.net/docify");
 
@@ -15,7 +7,7 @@ app.get("/",(req,res)=>{
 
 const io = require('socket.io')(3001 , {
     cors:{
-        origin:"https://docify-q26v.vercel.app/",
+        origin:"http://localhost:3000",
         methods:["GET","POST"],
     }
 });

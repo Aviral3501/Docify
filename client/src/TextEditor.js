@@ -18,17 +18,17 @@ const TOOLBAR_OPTIONS = [
   ["clean"],
 ]
 
-  
+
 export default function TextEditor() {  
   const {id:documentId}=useParams();
   const [socket,setSocket]=useState();
   const [quill, setQuill]=useState();
- 
+
   console.log(documentId);
   //only render the instance of quill once when the compoents mounts
 useEffect(()=>{
   //connecting with socket
-const s =io("https://docify-l6u4.vercel.app/");
+const s =io("http://localhost:3001");
 setSocket(s);
 
   //disconnecting with socket
@@ -105,11 +105,11 @@ useEffect(()=>{
   //wrap it inside the container else a toolbar keeps munting again and again
   return (
     <div className="container" ref={wrapperRef}>
-            
+
     </div> 
   )
 }
-    
+
 
 
 // ---------------------------------------------------------------------------->
